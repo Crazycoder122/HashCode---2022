@@ -6,8 +6,8 @@ class PizzaProblem:
     def __init__(self):
         self.clientChoiceArray = getClientsChoice('ip.txt')
         self.itemList = getAllItems(parseInput('ip.txt'))
-        self.gen_cnt = 100
-        self.populationSize = 50
+        self.gen_cnt = 10000
+        self.populationSize = 100
         self.presentGeneration = []
         self.geneSize = len(self.clientChoiceArray[0])
         self.generationGone = 0
