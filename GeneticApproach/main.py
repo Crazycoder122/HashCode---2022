@@ -6,8 +6,8 @@ class PizzaProblem:
     def __init__(self):
         self.clientChoiceArray = getClientsChoice('ip.txt')
         self.itemList = getAllItems(parseInput('ip.txt'))
-        self.gen_cnt = 10000
-        self.populationSize = 100
+        self.gen_cnt = 100
+        self.populationSize = 10
         self.presentGeneration = []
         self.geneSize = len(self.clientChoiceArray[0])
         self.generationGone = 0
@@ -112,6 +112,7 @@ class PizzaProblem:
             # Replacing the Prev Generation with the Newly Created Generation
             self.presentGeneration = deepcopy(nextGen)
             self.generationGone +=1
+            print(f'{self.generationGone} Generations Gone!!!')
 
 
         # Now getting the Best from Final Generation
